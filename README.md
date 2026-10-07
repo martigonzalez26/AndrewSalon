@@ -4,7 +4,7 @@ Web oficial de **AndrewSalon**, barbería en Santa Maria de Palautordera (Barcel
 
 Construida con **HTML + CSS + JavaScript puros**, sin librerías ni herramientas de compilación.
 
-> Estado: **Paso 1 – estructura del proyecto**. Los archivos están creados pero todavía vacíos.
+> Estado: **Paso 4 completado** (HTML, CSS y JavaScript). Pendiente: datos reales (fotos, horarios, dominio) y revisión final.
 
 ## Estructura
 
@@ -34,7 +34,9 @@ AndrewSalon/
 
 ## Cómo ver la web
 
-Cuando exista contenido, basta con abrir `index.html` en el navegador (doble clic).
+Basta con abrir `index.html` en el navegador (doble clic). No necesita instalar nada.
+
+Los datos del negocio (teléfono, WhatsApp, dirección, horario, URL de reservas) se editan en `js/config.js`.
 
 ## Datos del negocio
 
@@ -65,7 +67,7 @@ Cuando exista contenido, basta con abrir `index.html` en el navegador (doble cli
 ## Hoja de ruta
 
 1. ✅ Estructura de carpetas y archivos
-2. ⏳ `index.html` con contenido y SEO
-3. ⏳ Estilos (móvil primero)
-4. ⏳ JavaScript
+2. ✅ `index.html` con contenido y SEO
+3. ✅ Estilos (móvil primero)
+4. ✅ JavaScript (menú, scroll suave, animaciones, estado del horario)
 5. ⏳ Revisión y ajustes

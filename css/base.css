@@ -117,6 +117,11 @@ h1, h2, h3 {
   outline-offset: 3px;
 }
 
+/* Las secciones reciben el foco por código al navegar; no necesitan marco */
+[tabindex="-1"]:focus {
+  outline: none;
+}
+
 /* ---------- Utilidades ---------- */
 .visually-hidden {
   position: absolute;
