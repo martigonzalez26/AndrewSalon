@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ===== SEO básico ===== -->
+  <title>AndrewSalon | Barbería en Santa Maria de Palautordera</title>
+  <meta name="description" content="AndrewSalon, barbería en Santa Maria de Palautordera. Cortes, degradados y cuidado de barba con atención profesional. Reserva tu cita.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#121212">
+
+  <!-- TODO (dominio): descomentar y sustituir TU-DOMINIO.com cuando exista el dominio definitivo
+  <link rel="canonical" href="https://TU-DOMINIO.com/">
+  -->
+
+  <!-- ===== Open Graph (al compartir en WhatsApp / redes) ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="AndrewSalon">
+  <meta property="og:title" content="AndrewSalon | Barbería en Santa Maria de Palautordera">
+  <meta property="og:description" content="Cortes, degradados y cuidado de barba con atención profesional. Reserva tu cita.">
+  <!-- TODO (dominio + imagen): añadir og:url y og:image con URLs absolutas
+  <meta property="og:url" content="https://TU-DOMINIO.com/">
+  <meta property="og:image" content="https://TU-DOMINIO.com/assets/images/og-image.jpg">
+  -->
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <!-- Tipografías (Google Fonts). Se pueden alojar en assets/fonts/ más adelante -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+
+  <!-- ===== SEO local: datos estructurados (solo datos reales) ===== -->
+  <!-- TODO: añadir "url", "image", "openingHoursSpecification" y "geo" cuando tengamos los datos reales -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarberShop",
+    "name": "AndrewSalon",
+    "description": "Barbería en Santa Maria de Palautordera. Cortes, degradados y cuidado de barba.",
+    "telephone": "+34687395009",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plaça Major, 18",
+      "postalCode": "08460",
+      "addressLocality": "Santa Maria de Palautordera",
+      "addressRegion": "Barcelona",
+      "addressCountry": "ES"
+    },
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=Pla%C3%A7a%20Major%2018%2C%2008460%20Santa%20Maria%20de%20Palautordera",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "bestRating": "5",
+      "reviewCount": "77"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ==================== 1. HEADER / NAVEGACIÓN ==================== -->
+  <header class="site-header" id="inicio-header">
+    <div class="container header__inner">
+      <a class="logo" href="#inicio" aria-label="AndrewSalon, ir al inicio">
+        <span class="logo__name">Andrew<span class="logo__accent">Salon</span></span>
+        <span class="logo__tag">Barbería</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#sobre-nosotros">Nosotros</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#opiniones">Opiniones</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <a class="btn btn--primary nav__cta" href="#reserva" data-action="reservar">RESERVAR CITA</a>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ==================== 2. HERO ==================== -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <!-- TODO (foto real): añadir imagen de fondo en assets/images/hero/ -->
+      <div class="container hero__inner">
+        <p class="hero__eyebrow">Barbería en Santa Maria de Palautordera</p>
+        <h1 class="hero__title" id="hero-title">Tu estilo. Tu barbería. Tu momento.</h1>
+        <p class="hero__subtitle">Cortes precisos, degradados impecables y un trato profesional en AndrewSalon.</p>
+
+        <p class="hero__rating">
+          <span class="stars" aria-hidden="true">★</span>
+          <span>5,0 · 77 reseñas</span>
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg" href="#reserva" data-action="reservar">RESERVAR CITA</a>
+          <a class="btn btn--ghost btn--lg" href="#servicios">VER SERVICIOS</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. BARRA DE CONFIANZA ==================== -->
+    <section class="trust" aria-label="Valoración de clientes">
+      <div class="container trust__inner">
+        <div class="trust__item">
+          <span class="trust__value">5,0<span class="trust__max">/5</span></span>
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span class="visually-hidden">Valoración de 5,0 sobre 5</span>
+        </div>
+        <div class="trust__item">
+          <span class="trust__value">77</span>
+          <span class="trust__label">reseñas de clientes</span>
+        </div>
+        <div class="trust__item">
+          <span class="trust__label">Barbería en Santa Maria de Palautordera</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. SERVICIOS ==================== -->
+    <section class="section services" id="servicios" aria-labelledby="servicios-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__eyebrow">Servicios</p>
+          <h2 class="section__title" id="servicios-title">Lo que hacemos en AndrewSalon</h2>
+          <p class="section__lead">Consulta con nosotros el servicio que necesitas y reserva tu cita.</p>
+        </header>
+
+        <!-- Sin precios: se añadirán cuando tengamos los datos reales -->
+        <ul class="services__grid">
+          <li class="card service">
+            <span class="service__num" aria-hidden="true">01</span>
+            <h3 class="service__title">Corte de pelo</h3>
+            <p class="service__text">Corte a tu medida, con atención al detalle.</p>
+          </li>
+          <li class="card service">
+            <span class="service__num" aria-hidden="true">02</span>
+            <h3 class="service__title">Degradado / Fade</h3>
+            <p class="service__text">Degradados limpios y bien trabajados.</p>
+          </li>
+          <li class="card service">
+            <span class="service__num" aria-hidden="true">03</span>
+            <h3 class="service__title">Arreglo de barba</h3>
+            <p class="service__text">Perfilado y cuidado de la barba.</p>
+          </li>
+          <li class="card service">
+            <span class="service__num" aria-hidden="true">04</span>
+            <h3 class="service__title">Corte + barba</h3>
+            <p class="service__text">El servicio completo en una sola visita.</p>
+          </li>
+          <li class="card service">
+            <span class="service__num" aria-hidden="true">05</span>
+            <h3 class="service__title">Diseño y acabado</h3>
+            <p class="service__text">El toque final que marca la diferencia.</p>
+          </li>
+          <li class="card service">
+            <span class="service__num" aria-hidden="true">06</span>
+            <h3 class="service__title">Asesoramiento de estilo</h3>
+            <p class="service__text">Te ayudamos a encontrar el estilo que mejor va contigo.</p>
+          </li>
+        </ul>
+
+        <div class="section__cta">
+          <a class="btn btn--primary" href="#reserva" data-action="reservar">RESERVAR CITA</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. SOBRE ANDREWSALON ==================== -->
+    <section class="section about" id="sobre-nosotros" aria-labelledby="about-title">
+      <div class="container about__inner">
+        <div class="about__media" role="img" aria-label="Espacio reservado para una foto real de AndrewSalon">
+          <!-- TODO (foto real): sustituir el placeholder por una foto del local o del equipo -->
+          <div class="placeholder">
+            <span class="placeholder__tag">Foto pendiente</span>
+            <span class="placeholder__text">Aquí irá una foto real de AndrewSalon</span>
+          </div>
+        </div>
+
+        <div class="about__content">
+          <p class="section__eyebrow">Sobre AndrewSalon</p>
+          <h2 class="section__title" id="about-title">Una barbería donde importan los detalles</h2>
+          <p>En AndrewSalon creemos que una buena barbería no consiste únicamente en cortar el pelo. Se trata de cuidar los detalles, entender el estilo de cada cliente y conseguir que cada visita sea una buena experiencia.</p>
+          <a class="btn btn--ghost" href="#opiniones">Ver lo que dicen los clientes</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. GALERÍA ==================== -->
+    <section class="section gallery" id="galeria" aria-labelledby="galeria-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__eyebrow">Galería</p>
+          <h2 class="section__title" id="galeria-title">Nuestros trabajos</h2>
+          <p class="section__lead">Muy pronto: fotografías reales de los trabajos realizados en AndrewSalon.</p>
+        </header>
+
+        <!-- Placeholders identificados: sustituir por <img> reales en assets/images/gallery/ -->
+        <ul class="gallery__grid">
+          <li class="gallery__item"><div class="placeholder"><span class="placeholder__tag">Foto pendiente</span><span class="placeholder__text">Trabajo 1</span></div></li>
+          <li class="gallery__item"><div class="placeholder"><span class="placeholder__tag">Foto pendiente</span><span class="placeholder__text">Trabajo 2</span></div></li>
+          <li class="gallery__item"><div class="placeholder"><span class="placeholder__tag">Foto pendiente</span><span class="placeholder__text">Trabajo 3</span></div></li>
+          <li class="gallery__item"><div class="placeholder"><span class="placeholder__tag">Foto pendiente</span><span class="placeholder__text">Trabajo 4</span></div></li>
+          <li class="gallery__item"><div class="placeholder"><span class="placeholder__tag">Foto pendiente</span><span class="placeholder__text">Trabajo 5</span></div></li>
+          <li class="gallery__item"><div class="placeholder"><span class="placeholder__tag">Foto pendiente</span><span class="placeholder__text">Trabajo 6</span></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== 7. OPINIONES ==================== -->
+    <section class="section reviews" id="opiniones" aria-labelledby="opiniones-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__eyebrow">Opiniones</p>
+          <h2 class="section__title" id="opiniones-title">Lo que dicen nuestros clientes</h2>
+        </header>
+
+        <div class="reviews__summary">
+          <span class="reviews__score">5,0 / 5</span>
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span class="visually-hidden">Valoración de 5,0 sobre 5</span>
+          <span class="reviews__count">77 reseñas</span>
+        </div>
+
+        <div class="reviews__grid">
+          <figure class="card review">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <blockquote class="review__text">
+              <p>“10/10 sitio top peluqeros amables, y puntuales. Recomendable al 100%. Precio muy bueno, podrían cobrar incluso más por calidad. El mejor degradado que me han hecho nunca, repetiré sin duda 😄”</p>
+            </blockquote>
+            <figcaption class="review__author">Biel 12</figcaption>
+          </figure>
+
+          <figure class="card review">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <blockquote class="review__text">
+              <p>“Trato genial desde que entras, corte perfecto y muy profesional. La recomiendo al 100%.”</p>
+            </blockquote>
+            <figcaption class="review__author">Iker Ortega Serna</figcaption>
+          </figure>
+
+          <figure class="card review">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <blockquote class="review__text">
+              <p>“Muy profesional, trato excelente y aparte muy buen ambiente. Precio muy correcto. Nada más que añadir, un 10 y 100% recomendable.”</p>
+            </blockquote>
+            <figcaption class="review__author">Eric Garcia Castell</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 8. RESERVA ==================== -->
+    <section class="section booking" id="reserva" aria-labelledby="reserva-title">
+      <div class="container booking__inner">
+        <p class="section__eyebrow">Reserva</p>
+        <h2 class="section__title" id="reserva-title">Reserva tu cita</h2>
+        <p class="section__lead">Escríbenos por WhatsApp o llámanos y te ayudamos a encontrar tu hueco.</p>
+
+        <div class="booking__actions">
+          <!-- Reserva online: aún no existe sistema real.
+               TODO: cuando haya URL de reservas, ponerla en js/config.js y mostrar este botón -->
+          <a class="btn btn--primary btn--lg booking__online" href="#" data-action="reserva-online" hidden>RESERVAR CITA ONLINE</a>
+
+          <a class="btn btn--primary btn--lg" href="https://wa.me/34687395009?text=Hola%2C%20quiero%20reservar%20una%20cita%20en%20AndrewSalon." target="_blank" rel="noopener" data-action="whatsapp">RESERVAR POR WHATSAPP</a>
+          <a class="btn btn--ghost btn--lg" href="tel:+34687395009" data-action="llamar">LLAMAR · 687 39 50 09</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 9. UBICACIÓN ==================== -->
+    <section class="section location" id="ubicacion" aria-labelledby="ubicacion-title">
+      <div class="container location__inner">
+        <div class="location__info">
+          <p class="section__eyebrow">Ubicación</p>
+          <h2 class="section__title" id="ubicacion-title">Dónde estamos</h2>
+          <address class="location__address">
+            <strong>AndrewSalon</strong><br>
+            Plaça Major, 18<br>
+            08460 Santa Maria de Palautordera, Barcelona
+          </address>
+          <a class="btn btn--primary" href="https://www.google.com/maps/search/?api=1&amp;query=Pla%C3%A7a%20Major%2018%2C%2008460%20Santa%20Maria%20de%20Palautordera" target="_blank" rel="noopener" data-action="maps">CÓMO LLEGAR</a>
+        </div>
+
+        <!-- TODO: más adelante se puede incrustar el mapa de Google aquí -->
+        <div class="location__map" role="img" aria-label="Espacio reservado para el mapa">
+          <div class="placeholder">
+            <span class="placeholder__tag">Mapa pendiente</span>
+            <span class="placeholder__text">Plaça Major, 18 · Santa Maria de Palautordera</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 10. HORARIO ==================== -->
+    <section class="section hours" id="horario" aria-labelledby="horario-title">
+      <div class="container hours__inner">
+        <header class="section__head">
+          <p class="section__eyebrow">Horario</p>
+          <h2 class="section__title" id="horario-title">Cuándo abrimos</h2>
+        </header>
+
+        <p class="hours__status" id="hours-status">Abierto · Cierra a las 20:30</p>
+        <p class="hours__note">Horario completo próximamente. Para confirmar disponibilidad, llámanos o escríbenos.</p>
+
+        <!-- Estructura preparada para el horario semanal.
+             TODO: quitar "hidden" y rellenar las horas reales cuando las tengamos. No inventar horarios. -->
+        <ul class="hours__list" id="hours-list" hidden>
+          <li data-day="1"><span>Lunes</span><span data-hours></span></li>
+          <li data-day="2"><span>Martes</span><span data-hours></span></li>
+          <li data-day="3"><span>Miércoles</span><span data-hours></span></li>
+          <li data-day="4"><span>Jueves</span><span data-hours></span></li>
+          <li data-day="5"><span>Viernes</span><span data-hours></span></li>
+          <li data-day="6"><span>Sábado</span><span data-hours></span></li>
+          <li data-day="0"><span>Domingo</span><span data-hours></span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== 11. CONTACTO ==================== -->
+    <section class="section contact" id="contacto" aria-labelledby="contacto-title">
+      <div class="container contact__inner">
+        <header class="section__head">
+          <p class="section__eyebrow">Contacto</p>
+          <h2 class="section__title" id="contacto-title">Hablemos</h2>
+        </header>
+
+        <div class="contact__card card">
+          <p class="contact__name">AndrewSalon</p>
+          <address class="contact__address">
+            Plaça Major, 18<br>
+            08460 Santa Maria de Palautordera, Barcelona
+          </address>
+          <p class="contact__phone"><a href="tel:+34687395009" data-action="llamar">687 39 50 09</a></p>
+
+          <div class="contact__actions">
+            <a class="btn btn--primary" href="tel:+34687395009" data-action="llamar">LLAMAR</a>
+            <a class="btn btn--ghost" href="https://wa.me/34687395009?text=Hola%2C%20quiero%20reservar%20una%20cita%20en%20AndrewSalon." target="_blank" rel="noopener" data-action="whatsapp">WHATSAPP</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== 12. FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <p class="logo__name">Andrew<span class="logo__accent">Salon</span></p>
+        <p>Barbería en Santa Maria de Palautordera</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Navegación del pie de página">
+        <a href="#servicios">Servicios</a>
+        <a href="#galeria">Galería</a>
+        <a href="#opiniones">Opiniones</a>
+        <a href="#reserva">Reserva</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <address class="footer__contact">
+        Plaça Major, 18<br>
+        08460 Santa Maria de Palautordera, Barcelona<br>
+        <a href="tel:+34687395009" data-action="llamar">687 39 50 09</a>
+      </address>
+    </div>
+    <p class="footer__legal container">© <span id="year">2026</span> AndrewSalon. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Barra de acción fija en móvil (llamar / reservar) -->
+  <div class="mobile-bar" aria-label="Acciones rápidas">
+    <a class="btn btn--ghost" href="tel:+34687395009" data-action="llamar">LLAMAR</a>
+    <a class="btn btn--primary" href="#reserva" data-action="reservar">RESERVAR CITA</a>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/config.js"></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/nav.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/status.js" defer></script>
+</body>
+</html>
