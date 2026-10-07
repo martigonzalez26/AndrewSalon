@@ -1,0 +1,285 @@
+/* ==========================================================================
+   AndrewSalon · layout.css
+   Cómo se organiza la página. Móvil primero:
+   las reglas de base son para móvil y los @media añaden tablet y ordenador.
+   Puntos de corte: 640px (móvil grande) · 768px (tablet) · 960px · 1100px (ordenador)
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: var(--section-y);
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.section__head {
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+  text-align: center;
+}
+
+.section__cta {
+  margin-top: clamp(2rem, 5vw, 3rem);
+  text-align: center;
+}
+
+/* En móvil dejamos hueco abajo para la barra fija de acciones */
+body {
+  padding-bottom: calc(76px + env(safe-area-inset-bottom));
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--header-h);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--t-fast) var(--ease);
+}
+
+/* El fondo desenfocado va en un pseudo-elemento: si backdrop-filter estuviera en el
+   propio header, el menú móvil (position: fixed) quedaría atrapado dentro de él. */
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(13, 13, 13, 0.88);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  transition: background var(--t-fast) var(--ease);
+}
+
+.site-header.is-scrolled {
+  border-bottom-color: var(--line);
+}
+
+.site-header.is-scrolled::before {
+  background: rgba(13, 13, 13, 0.96);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  gap: 1rem;
+}
+
+/* Menú: en móvil es un panel a pantalla completa (lo abre nav.js, que añade la clase "js").
+   Sin JavaScript solo se muestra el botón de reservar. */
+.nav__list {
+  display: none;
+}
+
+.nav__cta {
+  min-height: 42px;
+  padding-inline: 1.1rem;
+  font-size: 0.78rem;
+}
+
+.js .nav {
+  position: fixed;
+  inset: var(--header-h) 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.25rem;
+  padding: 2rem var(--gutter) 4rem;
+  background: var(--c-black);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity var(--t-med) var(--ease), transform var(--t-med) var(--ease), visibility 0s linear var(--t-med);
+}
+
+.js .nav.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition-delay: 0s;
+}
+
+.js .nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.js .nav__cta {
+  width: 100%;
+  max-width: 320px;
+  min-height: 54px;
+  font-size: 0.9rem;
+}
+
+.js .nav-toggle {
+  display: flex;
+}
+
+body.nav-open {
+  overflow: hidden;
+}
+
+/* ---------- Grids de secciones (móvil: una columna) ---------- */
+.services__grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.about__inner,
+.location__inner {
+  display: grid;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: center;
+}
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.reviews__grid {
+  display: grid;
+  gap: 1rem;
+}
+
+/* ---------- Footer ---------- */
+.footer__inner {
+  display: grid;
+  gap: 2rem;
+}
+
+/* ---------- Barra fija de acciones (solo móvil) ---------- */
+.mobile-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 90;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 0.6rem;
+  padding: 0.65rem var(--gutter) calc(0.65rem + env(safe-area-inset-bottom));
+  background: rgba(13, 13, 13, 0.94);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--line);
+}
+
+/* ==========================================================================
+   Móvil grande (≥ 640px)
+   ========================================================================== */
+@media (min-width: 640px) {
+  :root {
+    --gutter: 1.75rem;
+  }
+
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================================================
+   Tablet (≥ 768px)
+   ========================================================================== */
+@media (min-width: 768px) {
+  :root {
+    --header-h: 76px;
+  }
+
+  body {
+    padding-bottom: 0;
+  }
+
+  .mobile-bar {
+    display: none;
+  }
+
+  .gallery__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+/* ==========================================================================
+   Ordenador (≥ 960px)
+   ========================================================================== */
+@media (min-width: 960px) {
+  :root {
+    --gutter: 2rem;
+  }
+
+  /* Menú en línea en la cabecera */
+  .nav,
+  .js .nav {
+    position: static;
+    display: flex;
+    align-items: center;
+    inset: auto;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 0;
+    background: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .nav__list,
+  .js .nav__list {
+    display: flex;
+    flex-direction: row;
+    gap: 1.75rem;
+  }
+
+  .nav__cta,
+  .js .nav__cta {
+    width: auto;
+    max-width: none;
+    min-height: 44px;
+    padding-inline: 1.4rem;
+    font-size: 0.8rem;
+  }
+
+  .js .nav-toggle {
+    display: none;
+  }
+
+  body.nav-open {
+    overflow: auto;
+  }
+
+  .services__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .about__inner,
+  .location__inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .reviews__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 3rem;
+  }
+}
