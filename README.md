@@ -46,13 +46,13 @@ Los datos del negocio (teléfono, WhatsApp, dirección, horario, URL de reservas
 - **Dirección:** Plaça Major, 18, 08460 Santa Maria de Palautordera, Barcelona
 - **Teléfono:** 687 39 50 09
 - **Código de ubicación:** MCVV+5X Santa Maria de Palautordera
-- **Horario conocido:** Abierto · Cierra a las 20:30
+- **Horario:** martes a sábado de 10:00 a 20:30 · domingo y lunes cerrado
 
 ## Pendiente de completar
 
 - [ ] **Fotos reales** del local y de los trabajos (`assets/images/`). Hasta entonces se usarán placeholders claramente identificados; no se usarán fotos de stock.
 - [ ] **Dominio definitivo**: completar la URL canónica en `index.html` y `sitemap.xml`.
-- [ ] **Horario completo** de todos los días.
+- [x] **Horario completo** (en `js/config.js`).
 - [ ] **Precios reales** de los servicios (no se muestran hasta tenerlos).
 - [ ] **Sistema de reservas real**: añadir su URL en `js/config.js`.
 - [ ] Confirmar que **687 39 50 09 tiene WhatsApp** activo.

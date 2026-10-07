@@ -43,7 +43,7 @@
   <link rel="stylesheet" href="css/sections.css">
 
   <!-- ===== SEO local: datos estructurados (solo datos reales) ===== -->
-  <!-- TODO: añadir "url", "image", "openingHoursSpecification" y "geo" cuando tengamos los datos reales -->
+  <!-- TODO: añadir "url", "image" y "geo" cuando tengamos los datos reales -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -58,6 +58,12 @@
       "addressLocality": "Santa Maria de Palautordera",
       "addressRegion": "Barcelona",
       "addressCountry": "ES"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "10:00",
+      "closes": "20:30"
     },
     "hasMap": "https://www.google.com/maps/search/?api=1&query=Pla%C3%A7a%20Major%2018%2C%2008460%20Santa%20Maria%20de%20Palautordera",
     "aggregateRating": {
@@ -325,10 +331,9 @@
         </header>
 
         <p class="hours__status" id="hours-status">Abierto · Cierra a las 20:30</p>
-        <p class="hours__note">Horario completo próximamente. Para confirmar disponibilidad, llámanos o escríbenos.</p>
 
-        <!-- Estructura preparada para el horario semanal.
-             TODO: quitar "hidden" y rellenar las horas reales cuando las tengamos. No inventar horarios. -->
+        <!-- Lista semanal: status.js la rellena con el horario de js/config.js y la muestra.
+             Sigue oculta si no hay horario confirmado. -->
         <ul class="hours__list" id="hours-list" hidden>
           <li data-day="1"><span>Lunes</span><span data-hours></span></li>
           <li data-day="2"><span>Martes</span><span data-hours></span></li>

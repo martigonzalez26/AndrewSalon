@@ -231,7 +231,7 @@ body.nav-open {
     align-items: center;
     inset: auto;
     flex-direction: row;
-    gap: 2rem;
+    gap: 1.25rem;
     padding: 0;
     background: none;
     opacity: 1;
@@ -243,7 +243,7 @@ body.nav-open {
   .js .nav__list {
     display: flex;
     flex-direction: row;
-    gap: 1.75rem;
+    gap: 1.1rem;
   }
 
   .nav__cta,
@@ -251,8 +251,9 @@ body.nav-open {
     width: auto;
     max-width: none;
     min-height: 44px;
-    padding-inline: 1.4rem;
-    font-size: 0.8rem;
+    padding-inline: 1.2rem;
+    font-size: 0.78rem;
+    white-space: nowrap;
   }
 
   .js .nav-toggle {
@@ -281,5 +282,25 @@ body.nav-open {
   .footer__inner {
     grid-template-columns: 1.2fr 1fr 1fr;
     gap: 3rem;
+  }
+}
+
+/* ==========================================================================
+   Ordenador grande (≥ 1100px)
+   ========================================================================== */
+@media (min-width: 1100px) {
+  .nav,
+  .js .nav {
+    gap: 2rem;
+  }
+
+  .nav__list,
+  .js .nav__list {
+    gap: 1.75rem;
+  }
+
+  .nav__cta,
+  .js .nav__cta {
+    padding-inline: 1.4rem;
   }
 }

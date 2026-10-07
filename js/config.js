@@ -44,23 +44,21 @@ window.AndrewSalon.config = {
     // Horario semanal CONFIRMADO. Clave = día (0 = domingo, 1 = lunes … 6 = sábado).
     //   null                          -> día sin confirmar (no se muestra nada)
     //   []                            -> cerrado ese día
-    //   [["09:00", "20:30"]]          -> abierto en ese tramo
+    //   [["10:00", "20:30"]]          -> abierto en ese tramo
     //   [["09:00", "13:30"], ["16:00", "20:30"]]  -> horario partido
-    // No rellenar hasta tener los horarios reales.
     schedule: {
-      1: null, // lunes
-      2: null, // martes
-      3: null, // miércoles
-      4: null, // jueves
-      5: null, // viernes
-      6: null, // sábado
-      0: null, // domingo
+      1: [], // lunes: cerrado
+      2: [["10:00", "20:30"]], // martes
+      3: [["10:00", "20:30"]], // miércoles
+      4: [["10:00", "20:30"]], // jueves
+      5: [["10:00", "20:30"]], // viernes
+      6: [["10:00", "20:30"]], // sábado
+      0: [], // domingo: cerrado
     },
 
-    // Mientras no haya horario confirmado, la web muestra el único dato conocido
-    // (tomado de Google en un momento concreto). Pon showSnapshot en false para
-    // ocultarlo y no mostrar nada hasta tener el horario real.
-    showSnapshot: true,
+    // Solo se usa si algún día no tuviera horario confirmado (null): entonces se
+    // mostraría este dato puntual de Google. Con el horario completo no se usa.
+    showSnapshot: false,
     snapshotText: "Abierto · Cierra a las 20:30",
   },
 };
