@@ -58,6 +58,17 @@ Los datos del negocio (teléfono, WhatsApp, dirección, horario, URL de reservas
 - [ ] Confirmar que **687 39 50 09 tiene WhatsApp** activo.
 - [x] Imagen para compartir en redes (`assets/images/og-image.jpg`). Falta activar `og:image` al tener dominio.
 
+## Publicación en GitHub Pages
+
+La web es 100 % estática y todas las rutas son **relativas** (`css/…`, `js/…`, `assets/…`, sin `/` inicial), así que funciona igual en la raíz de un dominio que en la subruta de GitHub Pages.
+
+- **URL de prueba:** `https://martigonzalez26.github.io/AndrewSalon/`
+- **Origen:** rama `claude/friendly-feynman-jgunp9`, carpeta `/ (root)`.
+- `.nojekyll` (archivo vacío en la raíz) evita que GitHub procese la web con Jekyll y sirve los archivos tal cual.
+- Pasos en GitHub: *Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: `claude/friendly-feynman-jgunp9` / `/ (root)` → Save*.
+- Los cambios que se suban a esa rama se publican solos en 1–2 minutos.
+- Al tener dominio propio: sustituir `TU-DOMINIO.com` (ver pendientes) y configurarlo en *Settings → Pages → Custom domain*.
+
 ## Principios del proyecto
 
 - No se inventan datos: precios, horarios, reseñas, premios ni cifras que no sean reales.
