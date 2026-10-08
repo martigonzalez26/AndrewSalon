@@ -448,9 +448,9 @@
 
 @media (min-width: 640px) {
   .booking__actions {
-    grid-auto-flow: column;
+    display: flex;
+    flex-wrap: wrap; /* con 3 botones, el último baja de línea si no caben */
     justify-content: center;
-    grid-auto-columns: max-content;
     gap: 1rem;
   }
 }

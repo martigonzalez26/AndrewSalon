@@ -32,10 +32,17 @@ window.AndrewSalon.config = {
   // Enlace de Google Maps. Si es null se genera a partir de la dirección.
   mapsUrl: null,
 
-  // Sistema de reservas online. Vacío = todavía no existe (el botón queda oculto).
-  // Cuando haya uno real, pon aquí su URL completa, por ejemplo "https://..."
+  // Sistema de reservas online (Booksy). Todos los botones "RESERVAR CITA" abren este
+  // enlace en una pestaña nueva. Si se deja vacío, vuelven a llevar a la sección Reserva.
   booking: {
-    url: "",
+    url: "https://booksy.com/es-es/154915_andrewsalon_barberia_49547_santa-maria-de-palautordera#ba_s=sh_1",
+  },
+
+  // Reseñas: enlace para que un cliente deje su opinión.
+  // Vacío = se abre la ficha de AndrewSalon en Google Maps, donde está "Escribir una reseña".
+  // Si se consigue el enlace directo de reseñas de Google, ponerlo aquí.
+  reviews: {
+    writeUrl: "",
   },
 
   hours: {

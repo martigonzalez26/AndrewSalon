@@ -279,6 +279,11 @@
             <figcaption class="review__author">Eric Garcia Castell</figcaption>
           </figure>
         </div>
+
+        <!-- El enlace real lo pone main.js desde js/config.js (reviews.writeUrl) -->
+        <div class="section__cta">
+          <a class="btn btn--primary" href="https://www.google.com/maps/search/?api=1&amp;query=AndrewSalon%2C%20Pla%C3%A7a%20Major%2C%2018%2C%2008460%20Santa%20Maria%20de%20Palautordera" target="_blank" rel="noopener" data-action="resena">DEJAR UNA RESEÑA</a>
+        </div>
       </div>
     </section>
 
@@ -287,12 +292,12 @@
       <div class="container booking__inner">
         <p class="section__eyebrow">Reserva</p>
         <h2 class="section__title" id="reserva-title">Reserva tu cita</h2>
-        <p class="section__lead">Escríbenos por WhatsApp o llámanos y te ayudamos a encontrar tu hueco.</p>
+        <p class="section__lead">Reserva online, escríbenos por WhatsApp o llámanos y te ayudamos a encontrar tu hueco.</p>
 
         <div class="booking__actions">
-          <!-- Reserva online: aún no existe sistema real.
-               TODO: cuando haya URL de reservas, ponerla en js/config.js y mostrar este botón -->
-          <a class="btn btn--primary btn--lg booking__online" href="#" data-action="reserva-online" hidden>RESERVAR CITA ONLINE</a>
+          <!-- Reserva online (Booksy): la URL se configura en js/config.js (booking.url).
+               El botón solo se muestra si hay URL configurada. -->
+          <a class="btn btn--primary btn--lg booking__online" href="https://booksy.com/es-es/154915_andrewsalon_barberia_49547_santa-maria-de-palautordera#ba_s=sh_1" target="_blank" rel="noopener" data-action="reserva-online" hidden>RESERVAR CITA ONLINE</a>
 
           <a class="btn btn--primary btn--lg" href="https://wa.me/34687395009?text=Hola%2C%20quiero%20reservar%20una%20cita%20en%20AndrewSalon." target="_blank" rel="noopener" data-action="whatsapp">RESERVAR POR WHATSAPP</a>
           <a class="btn btn--ghost btn--lg" href="tel:+34687395009" data-action="llamar">LLAMAR · 687 39 50 09</a>

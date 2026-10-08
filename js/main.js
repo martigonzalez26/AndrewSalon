@@ -27,6 +27,14 @@
     return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(query);
   }
 
+  // Ficha del negocio en Google Maps (desde ahí se puede escribir una reseña)
+  function reviewHref() {
+    if (isHttpUrl(cfg.reviews && cfg.reviews.writeUrl)) return cfg.reviews.writeUrl.trim();
+    const a = cfg.address;
+    const query = cfg.name + ", " + a.street + ", " + a.postalCode + " " + a.city;
+    return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(query);
+  }
+
   function isHttpUrl(value) {
     return typeof value === "string" && /^https?:\/\/\S+$/i.test(value.trim());
   }
@@ -37,15 +45,24 @@
     el.setAttribute("rel", "noopener");
   }
 
-  /* Cada elemento con data-action recibe su enlace real.
-     "reservar" no se toca: es un enlace interno (#reserva). */
+  function hasBooking() {
+    return isHttpUrl(cfg.booking.url);
+  }
+
+  /* Cada elemento con data-action recibe su enlace real. */
   const ACTIONS = {
     llamar: (el) => el.setAttribute("href", phoneHref()),
     whatsapp: (el) => setExternal(el, whatsappHref()),
     maps: (el) => setExternal(el, mapsHref()),
+    resena: (el) => setExternal(el, reviewHref()),
+    // Con sistema de reservas configurado, RESERVAR CITA abre Booksy;
+    // sin él, sigue llevando a la sección Reserva (#reserva).
+    reservar: (el) => {
+      if (hasBooking()) setExternal(el, cfg.booking.url.trim());
+    },
+    // Botón "RESERVAR CITA ONLINE" de la sección Reserva: solo existe si hay sistema real
     "reserva-online": (el) => {
-      // Solo se muestra si hay un sistema de reservas real configurado
-      if (isHttpUrl(cfg.booking.url)) {
+      if (hasBooking()) {
         setExternal(el, cfg.booking.url.trim());
         el.hidden = false;
       } else {
