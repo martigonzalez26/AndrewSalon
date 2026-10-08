@@ -4,7 +4,7 @@ Web oficial de **AndrewSalon**, barbería en Santa Maria de Palautordera (Barcel
 
 Construida con **HTML + CSS + JavaScript puros**, sin librerías ni herramientas de compilación.
 
-> Estado: **Paso 4 completado** (HTML, CSS y JavaScript). Pendiente: datos reales (fotos, horarios, dominio) y revisión final.
+> Estado: **Paso 5 completado** (HTML, CSS, JavaScript, favicon, mapa y archivos SEO). Pendiente: fotos reales, dominio y publicación.
 
 ## Estructura
 
@@ -51,12 +51,12 @@ Los datos del negocio (teléfono, WhatsApp, dirección, horario, URL de reservas
 ## Pendiente de completar
 
 - [ ] **Fotos reales** del local y de los trabajos (`assets/images/`). Hasta entonces se usarán placeholders claramente identificados; no se usarán fotos de stock.
-- [ ] **Dominio definitivo**: completar la URL canónica en `index.html` y `sitemap.xml`.
+- [ ] **Dominio definitivo**: completar la URL canónica y `og:url` / `og:image` en `index.html`, el bloque comentado de `sitemap.xml` y la línea `Sitemap:` de `robots.txt` (buscar `TU-DOMINIO.com`).
 - [x] **Horario completo** (en `js/config.js`).
 - [ ] **Precios reales** de los servicios (no se muestran hasta tenerlos).
 - [ ] **Sistema de reservas real**: añadir su URL en `js/config.js`.
 - [ ] Confirmar que **687 39 50 09 tiene WhatsApp** activo.
-- [ ] Imagen para compartir en redes (`assets/images/og-image.jpg`).
+- [x] Imagen para compartir en redes (`assets/images/og-image.jpg`). Falta activar `og:image` al tener dominio.
 
 ## Principios del proyecto
 
@@ -70,4 +70,5 @@ Los datos del negocio (teléfono, WhatsApp, dirección, horario, URL de reservas
 2. ✅ `index.html` con contenido y SEO
 3. ✅ Estilos (móvil primero)
 4. ✅ JavaScript (menú, scroll suave, animaciones, estado del horario)
-5. ⏳ Revisión y ajustes
+5. ✅ Favicon, mapa incrustado, `robots.txt`, `sitemap.xml` y revisión de accesibilidad
+6. ⏳ Fotos reales, dominio y publicación

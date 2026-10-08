@@ -20,12 +20,14 @@
   <meta property="og:site_name" content="AndrewSalon">
   <meta property="og:title" content="AndrewSalon | Barbería en Santa Maria de Palautordera">
   <meta property="og:description" content="Cortes, degradados y cuidado de barba con atención profesional. Reserva tu cita.">
-  <!-- TODO (dominio + imagen): añadir og:url y og:image con URLs absolutas
+  <!-- TODO (dominio): la imagen ya existe (assets/images/og-image.jpg); falta el dominio para las URLs absolutas.
+       Añadir og:url y og:image al tenerlo
   <meta property="og:url" content="https://TU-DOMINIO.com/">
   <meta property="og:image" content="https://TU-DOMINIO.com/assets/images/og-image.jpg">
   -->
 
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 
   <!-- Tipografías (Google Fonts). Se pueden alojar en assets/fonts/ más adelante -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -313,11 +315,14 @@
         </div>
 
         <!-- TODO: más adelante se puede incrustar el mapa de Google aquí -->
-        <div class="location__map" role="img" aria-label="Espacio reservado para el mapa">
-          <div class="placeholder">
-            <span class="placeholder__tag">Mapa pendiente</span>
-            <span class="placeholder__text">Plaça Major, 18 · Santa Maria de Palautordera</span>
-          </div>
+        <!-- Mapa de Google incrustado (sin clave de API), con la misma dirección que "CÓMO LLEGAR" -->
+        <div class="location__map">
+          <iframe
+            title="Mapa de Google con la ubicación de AndrewSalon, Plaça Major 18, Santa Maria de Palautordera"
+            src="https://www.google.com/maps?q=Pla%C3%A7a%20Major%2C%2018%2C%2008460%20Santa%20Maria%20de%20Palautordera&amp;output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
         </div>
       </div>
     </section>

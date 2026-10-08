@@ -1,0 +1,6 @@
+# AndrewSalon · permitir que los buscadores rastreen toda la web
+User-agent: *
+Allow: /
+
+# TODO (dominio): descomentar y sustituir TU-DOMINIO.com cuando exista el dominio definitivo
+# Sitemap: https://TU-DOMINIO.com/sitemap.xml
