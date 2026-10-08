@@ -51,6 +51,7 @@ Los datos del negocio (teléfono, WhatsApp, dirección, horario, URL de reservas
 ## Pendiente de completar
 
 - [ ] **Fotos reales** del local y de los trabajos (`assets/images/`). Hasta entonces se usarán placeholders claramente identificados; no se usarán fotos de stock.
+- [ ] **Quitar `noindex`**: al publicar con dominio, cambiar en `index.html` `noindex, nofollow` por `index, follow` (ahora la web de prueba no sale en Google).
 - [ ] **Dominio definitivo**: completar la URL canónica y `og:url` / `og:image` en `index.html`, el bloque comentado de `sitemap.xml` y la línea `Sitemap:` de `robots.txt` (buscar `TU-DOMINIO.com`).
 - [x] **Horario completo** (en `js/config.js`).
 - [ ] **Precios reales** de los servicios (no se muestran hasta tenerlos).
