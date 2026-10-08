@@ -55,7 +55,7 @@ Los datos del negocio (teléfono, WhatsApp, dirección, horario, URL de reservas
 - [x] **Horario completo** (en `js/config.js`).
 - [ ] **Precios reales** de los servicios (no se muestran hasta tenerlos).
 - [x] **Sistema de reservas**: Booksy (`booking.url` en `js/config.js`). Los botones RESERVAR CITA abren Booksy; WhatsApp y Llamar se mantienen.
-- [ ] **Enlace directo de reseñas de Google** (opcional): ponerlo en `reviews.writeUrl` de `js/config.js`. Mientras tanto, DEJAR UNA RESEÑA abre la ficha de AndrewSalon en Google Maps.
+- [x] **Reseñas**: DEJAR UNA RESEÑA abre la ficha de AndrewSalon en Google Maps (`reviews.writeUrl` en `js/config.js`).
 - [ ] Confirmar que **687 39 50 09 tiene WhatsApp** activo.
 - [x] Imagen para compartir en redes (`assets/images/og-image.jpg`). Falta activar `og:image` al tener dominio.
 

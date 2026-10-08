@@ -38,11 +38,10 @@ window.AndrewSalon.config = {
     url: "https://booksy.com/es-es/154915_andrewsalon_barberia_49547_santa-maria-de-palautordera#ba_s=sh_1",
   },
 
-  // Reseñas: enlace para que un cliente deje su opinión.
-  // Vacío = se abre la ficha de AndrewSalon en Google Maps, donde está "Escribir una reseña".
-  // Si se consigue el enlace directo de reseñas de Google, ponerlo aquí.
+  // Reseñas: el botón "DEJAR UNA RESEÑA" abre la ficha de AndrewSalon en Google Maps.
+  // Si se deja vacío, abre una búsqueda de Google Maps con el nombre y la dirección.
   reviews: {
-    writeUrl: "",
+    writeUrl: "https://www.google.com/maps/place/AndrewSalon/@41.692982,2.4424067,1465m/data=!3m1!1e3!4m6!3m5!1s0x12a4cdb7ac4315e3:0x6d13019258c4193c!8m2!3d41.692982!4d2.4449816!16s%2Fg%2F11mlyhsyb3?entry=ttu&g_ep=EgoyMDI2MTAwNS4wIKXMDSoASAFQAw%3D%3D",
   },
 
   hours: {
